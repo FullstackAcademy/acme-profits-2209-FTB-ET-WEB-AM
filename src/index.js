@@ -1,18 +1,15 @@
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
-import Users from './Users';
-import Search from './Search';
-import Loader from './Loader';
+import Search from './Components/Search';
+import Profits from './Components/Profits';
 
 const App = ()=> {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [profits, setProfits] = useState([]);
   return (
     <div>
-      <h1>Acme User Search</h1>
-      <Search setUsers={ setUsers } setIsLoading={ setIsLoading }/>
-      <Users users={ users }/>
-      { isLoading ? <Loader /> : null }
+      <h1>Acme Profits</h1>
+      <Search setProfits={ setProfits }/>
+      <Profits profits={ profits }/>
     </div>
   );
 };
